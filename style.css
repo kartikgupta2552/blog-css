@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ****************************************** class ************************************************ */
+
+.container{
+    height: 100%;
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+
+.card{
+    height: 350px;
+    border: 1px solid rgba(207, 204, 204, 0.41);
+    width: 250px;
+    border-radius: 5px;
+}
+
+.cardImage{
+    height: 50%;
+    width: 248px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.blogBox{
+    padding: 10px;
+}
+
+.blogTitle{
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.blogDesc{
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.636);
+}
+
+.cardFooterContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.person_info_container{
+    display: flex;
+    align-items: center;
+}
+
+.avatarImage{
+    height: 100%;
+    background-color: rgba(216, 215, 215, 0.298);
+    width: 25px;
+    border-radius: 50%;
+    padding-bottom: 2px;
+    margin-right: 7px;
+}
+.avatarImage > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.personName{
+    line-height: 14px;
+    font-size: 0.9rem;
+    color: rgb(82, 82, 209);
+}
+
+.personDate{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.536);
+}
+
+.cardFooterButton{
+    padding: 3px 8px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.636);;
+}
+
+
+/* ****************************************** id ************************************************ */
+
+#headerDesc{
+    margin-top: 12px;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.571);
+    text-align: center;
+}
