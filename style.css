@@ -6,37 +6,104 @@
 
 body{
     height: 100vh;
-    width: 100vw;
 }
 
 header{
-    width: 50%;
+    width: 90%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#headerDesc{
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.571);
+    text-align: center;
+}
+
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 20px;
+    padding: 0px 4%;
+    /* align-items: start; */
+}
+
+
+
+@media (min-width: 550px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0px 5%;
+        gap: 10px;
+    }
+    header{
+        width: 80%;
+    }
+}
+
+@media (min-width: 860px){
+    main{
+        grid-template-columns: repeat(3,1fr);
+        padding: 0px 5%;
+    }
+    header{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1220px){
+    main{
+        grid-template-columns: repeat(4,1fr);
+        padding: 0px 8%;
+    }
+    header{
+        width: 40%;
+    }
+}
+
 /* ****************************************** class ************************************************ */
 
 .container{
-    height: 100%;
-    width: 80%;
+    /* height: 100%; */
+    /* width: 80%; */
     margin: 0px auto;
     padding: 10px;
     /* background-color: aqua; */
 }
 
 .card{
-    height: 350px;
+    /* height: 350px;
+    width: 250px; */
     border: 1px solid rgba(207, 204, 204, 0.41);
-    width: 250px;
     border-radius: 5px;
 }
 
+.card:hover .cardImage{
+    transform: scale(1.1);
+    transition: transform 200ms ease-in-out;
+}
+
+.card_image_container{
+    width: 100%;
+    aspect-ratio: 4/2.5;
+    overflow: hidden;
+    display: inline-block;
+}
+
 .cardImage{
-    height: 50%;
-    width: 248px;
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -47,7 +114,10 @@ header{
 
 .blogTitle{
     font-weight: bold;
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
+}
+.blogTitle:hover{
+    color: rgb(70, 70, 238);
 }
 
 .blogDesc{
@@ -59,7 +129,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.1rem;
 }
 
 .person_info_container{
@@ -68,18 +138,15 @@ header{
 }
 
 .avatarImage{
-    height: 100%;
+    /* height: 100%; */
+    width: 2rem; 
+    aspect-ratio: 1/1;
     background-color: rgba(216, 215, 215, 0.298);
-    width: 25px;
     border-radius: 50%;
     padding-bottom: 2px;
-    margin-right: 7px;
+    margin-right: 0.5rem;
 }
-.avatarImage > img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+
 
 .personName{
     line-height: 14px;
@@ -101,11 +168,3 @@ header{
 }
 
 
-/* ****************************************** id ************************************************ */
-
-#headerDesc{
-    margin-top: 12px;
-    margin-bottom: 15px;
-    color: rgba(0, 0, 0, 0.571);
-    text-align: center;
-}
